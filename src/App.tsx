@@ -46,7 +46,7 @@ const useUpdateUserMutation = (
   options?: UseMutationOptions<AxiosResponse, AxiosError, UpdateUserInput>
 ): UseMutationResult<AxiosResponse, AxiosError, UpdateUserInput> => useMutation(
   async (input: UpdateUserInput) => await axios.post(
-    'http://localhost:8000/submit-user',
+    'https://us-central1-little-magic-school-backend.cloudfunctions.net/app/submit-user',
     input,
   ),
   {...options}
